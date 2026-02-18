@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progresso do Projeto fitAi</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background:#f6f9fc; color:#333; }
+    h1 { color:#2c3e50; }
+    .card { background:white; border-radius:8px; padding:16px; box-shadow:0 2px 6px rgba(0,0,0,.05); margin:12px 0; }
+    .row{ display:flex; gap:16px; align-items: center; }
+    .badge{ display:inline-block; padding:6px 10px; border-radius:12px; background:#e8eefc; color:#1f3a8a; font-weight:600; }
+    .log{ font-family: monospace; font-size:12px; color:#555; }
+    ul{ margin:0; padding-left:20px; }
+  </style>
+</head>
+<body>
+  <h1>Dashboard de Progresso - fitAi</h1>
+  <div class="card">
+    <div class="row"><strong>Projeto:</strong>&nbsp;fitAi &nbsp;<span class="badge">GitHub Pages</span></div>
+    <div class="row"><strong>Repositório:</strong>&nbsp; https://github.com/rodrigooidr/fitAi</div>
+    <div class="row"><strong>Link Público (Pages):</strong>&nbsp;<a href="https://rodrigooidr.github.io/fitAi/" target="_blank">https://rodrigooidr.github.io/fitAi/</a></div>
+  </div>
+  <div class="card">
+    <h3>Agentes</h3>
+    <ul>
+      <li>Clawdio (Orquestrador): Ativo</li>
+      <li>ValidatorAI: Em análise/validação</li>
+      <li>MVPBuilderAI: Em preparação</li>
+      <li>CoreDevAI: Em preparação</li>
+      <li>QualityAssuranceAI: Em preparação</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Logs (exemplo)</h3>
+    <div class="log">[00:00] pipeline iniciado. MVP-skeleton criado. Dashboard publicado.</div>
+  </div>
+  <div class="card">
+    <h3>Próximos passos</h3>
+    <ul>
+      <li>Finalizar artefatos de validação (US/CA/ ambiguidades).</li>
+      <li>Implementar MVP skeleton completo nos diretórios.</li>
+      <li>Rodar VM CI básico e atualizar dashboard com logs em tempo real.</li>
+    </ul>
+  </div>
+</body>
+</html>
