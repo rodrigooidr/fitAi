@@ -1,0 +1,125 @@
+{
+  "project": "fitAi",
+  "description": "Fábrica de software automatizada com agentes de IA",
+  "version": "1.0.0",
+  "agents": {
+    "orchestrator": {
+      "name": "Clawdio",
+      "role": "Coordenação geral dos agentes",
+      "status": "active",
+      "responsibilities": [
+        "Monitorar progresso de todos os agentes",
+        "Tomar decisões de alto nível",
+        "Atualizar dashboard de progresso",
+        "Escalonar problemas para intervenção humana"
+      ]
+    },
+    "validator": {
+      "name": "ValidatorAI",
+      "role": "Validação de requisitos",
+      "status": "completed",
+      "artifacts_generated": [
+        "US_detail.md",
+        "CA_expanded.md",
+        "Ambiguities.md"
+      ],
+      "responsibilities": [
+        "Validar requisitos do projeto",
+        "Identificar e questionar ambiguidades",
+        "Garantir que os requisitos são testáveis e completos"
+      ]
+    },
+    "mvp_builder": {
+      "name": "MVPBuilderAI",
+      "role": "Construção da estrutura do MVP",
+      "status": "ready",
+      "responsibilities": [
+        "Criar estrutura de diretórios",
+        "Definir stack tecnológica",
+        "Configurar ambiente de desenvolvimento",
+        "Criar templates básicos de código"
+      ]
+    },
+    "core_dev": {
+      "name": "CoreDevAI",
+      "role": "Desenvolvimento do código",
+      "status": "ready",
+      "responsibilities": [
+        "Implementar features baseadas nos requisitos",
+        "Realizar code review automatizado",
+        "Manter padrões de código",
+        "Refatorar quando necessário"
+      ]
+    },
+    "qa": {
+      "name": "QualityAssuranceAI",
+      "role": "Garantia de qualidade",
+      "status": "ready",
+      "responsibilities": [
+        "Escrever e executar testes automatizados",
+        "Validar funcionalidades implementadas",
+        "Garantir cobertura de testes adequada",
+        "Reportar bugs e issues"
+      ]
+    },
+    "deployment": {
+      "name": "DeploymentAI",
+      "role": "CI/CD e Deploy",
+      "status": "ready",
+      "responsibilities": [
+        "Configurar pipelines de CI/CD",
+        "Gerenciar deployments automatizados",
+        "Monitorar saúde da aplicação",
+        "Rollback em caso de problemas"
+      ]
+    }
+  },
+  "workflow": [
+    {
+      "phase": 1,
+      "name": "Definição",
+      "agent": "orchestrator",
+      "description": "Coletar requisitos iniciais do projeto"
+    },
+    {
+      "phase": 2,
+      "name": "Validação",
+      "agent": "validator",
+      "description": "Validar requisitos e questionar ambiguidades"
+    },
+    {
+      "phase": 3,
+      "name": "MVP Skeleton",
+      "agent": "mvp_builder",
+      "description": "Criar estrutura do projeto e definir stack"
+    },
+    {
+      "phase": 4,
+      "name": "Desenvolvimento",
+      "agent": "core_dev",
+      "description": "Implementar features seguindo requisitos"
+    },
+    {
+      "phase": 5,
+      "name": "Testes",
+      "agent": "qa",
+      "description": "Executar testes automatizados e validar qualidade"
+    },
+    {
+      "phase": 6,
+      "name": "Deploy",
+      "agent": "deployment",
+      "description": "Configurar CI/CD e fazer deploy"
+    },
+    {
+      "phase": 7,
+      "name": "Monitoramento",
+      "agent": "orchestrator",
+      "description": "Monitorar aplicação e coletar feedback"
+    }
+  ],
+  "current_phase": 3,
+  "dashboard_url": "https://rodrigooidr.github.io/fitAi/",
+  "github_repo": "https://github.com/rodrigooidr/fitAi",
+  "last_updated": "2026-02-20T22:00:00-03:00"
+}

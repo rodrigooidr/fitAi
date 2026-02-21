@@ -1,0 +1,57 @@
+name: CI Pipeline - fitAi
+
+on:
+  push:
+    branches: [ main, MVP-skeleton, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Validate Project Structure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Validate required files
+        run: |
+          echo "Validating project structure..."
+          test -f README.md && echo "✓ README.md exists"
+          test -f agent_factory.config.json && echo "✓ agent_factory.config.json exists"
+          test -d apps/frontend && echo "✓ apps/frontend directory exists"
+          test -d apps/backend && echo "✓ apps/backend directory exists"
+          test -d ia && echo "✓ ia directory exists"
+          test -d tests && echo "✓ tests directory exists"
+          test -d docs && echo "✓ docs directory exists"
+          echo "Validation complete!"
+
+  build-status:
+    name: Update Build Status
+    runs-on: ubuntu-latest
+    needs: validate
+    if: always()
+    steps:
+      - name: Update dashboard with build status
+        run: |
+          echo "Build status: ${{ job.status }}"
+          echo "Updating dashboard would happen here"
+          # TODO: Integrate with dashboard update API
+          
+  agent-factory-check:
+    name: Agent Factory Health Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check agent factory configuration
+        run: |
+          echo "Checking agent factory configuration..."
+          # Simulate agent status check
+          echo "Agentes da fábrica:"
+          echo "- Clawdio (Orquestrador): ATIVO"
+          echo "- ValidatorAI: CONCLUÍDO"
+          echo "- MVPBuilderAI: PRONTO"
+          echo "- CoreDevAI: PRONTO"
+          echo "- QualityAssuranceAI: PRONTO"
+          echo "- DeploymentAI: PRONTO"
+          echo ""
+          echo "Fase atual: MVP Skeleton & Agent Factory Setup"
